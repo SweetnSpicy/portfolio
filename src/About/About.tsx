@@ -1,7 +1,12 @@
 import React from "react";
 import './About.scss';
 
-class About extends React.Component {
-
+function About() {
+    return(
+        <div>
+            <h2>About page Loaded</h2>
+        </div>
+    );
 }
+
 export default About;
