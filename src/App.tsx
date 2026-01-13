@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 import About from './About/About';
 import Home from './Home/Home';
+import Resume from './Resume/Resume';
+import ProjectHome from './Projects/ProjectHome';
 
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -19,8 +21,8 @@ function App() {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
-            <li>Resumes</li>
-            <li>Projects</li>
+            <li><Link to="/resumes">Resumes</Link></li>
+            <li><Link to="/projects">Projects</Link></li>
           </ul>
         </nav>
 
@@ -28,6 +30,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/projects" element={<ProjectHome />} />
         </Routes>
       </BrowserRouter>
       <div>

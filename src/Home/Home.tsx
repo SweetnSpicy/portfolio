@@ -1,6 +1,6 @@
 
 import reactLogo from '../assets/react.svg'
-import './Home.scss';
+import './Home.scss'
 
 /** 
  * main page file 
