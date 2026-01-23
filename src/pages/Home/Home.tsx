@@ -1,6 +1,4 @@
 
-import './Home.scss'
-
 /** 
  * main page file 
 */
