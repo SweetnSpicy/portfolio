@@ -1,8 +1,12 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
   padding: 2rem;
-  text-align: center;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
 }
 
 .logo {
@@ -50,6 +54,8 @@
 nav {
   position: fixed;
   top: 0px;
+  left: 0px;
+  right: 0px;
   width: 100%;
   z-index: 1000;
 }
@@ -124,6 +130,7 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 
 /*****
 HOME PAGE

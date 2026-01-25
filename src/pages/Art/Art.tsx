@@ -51,6 +51,7 @@ const Art = () => {
 				so that one day I can quit all my jobs and become a Twitter artist (joking). I just want to create
 				something as cool as what I see online all the time.
 			</p>
+
 			<p>Add button here to make portraits appear</p>
 			<ImageCarousel images={images} />
 			<p>Add button here to make other type of images appear</p>
