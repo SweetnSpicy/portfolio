@@ -1,15 +1,14 @@
 
 #root {
-  max-width: 1600px;
+  max-width: 100%;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   padding: 2rem;
-  text-align: center;
 }
 
 .card {
   padding: 2em;
-  background-color: red;
+  background-color: lightcyan;
 }
 
 .read-the-docs {
