@@ -31,7 +31,7 @@ const Art = () => {
 			<p>
 				For the last few years, i have been trying to improve my art skills. I wouldn't say
 				I had a terrible foundation. i've had art classes, and with experience in frontend
-				developemtn, I understand how to make something look "good". The on-paper steps that
+				developemnt, I understand how to make something look "good". The on-paper steps that
 				should be followed to make sure that your drawings or website looks nice. Obviously,
 				that only gets you so far.
 			</p>
