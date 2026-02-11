@@ -17,7 +17,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  /* color: #646cff; */
   text-decoration: inherit;
 }
 a:hover {
@@ -74,6 +74,17 @@ button:focus-visible {
   src: url(assets/ColoredCrayons-7wPR.woff);
 }
 
-h2 {
-  font-family: crayola;
+@font-face {
+  font-family: oliviar;
+  src: url(assets/OliviarSans-Regular.woff);
+}
+
+@font-face {
+  font-family: justsansbold;
+  src: url(assets/JUSTSansExBold.woff);
+}
+
+@font-face {
+  font-family: justsans;
+  src: url(assets/JUSTSansRegular.woff);
 }

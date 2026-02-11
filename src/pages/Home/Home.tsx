@@ -1,64 +1,48 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import fredlogo from '@assets/FredLogo.png';
+import caullylogo from '@assets/CaullyLogo.png';
+import { useUser } from '../../contexts/UserContext';
 
-import CaullyHome from './CaullyHome';
-import FredHome from './FredHome';
-import Navbar from '@/components/Navbar';
-import About from '@/pages/About/About'
-import FredResume from '@/pages/Resume/FredResume';
-import CaullyResume from '@/pages/Resume/CaullyResume';
-import ProjectHome from '@/pages/Projects/ProjectHome';
-import Art from '@/pages/Art/Art';
-
-import caullylogo from '@assets/CaullyLogo.png'
-import fredlogo from '@assets/FredLogo.png'
-
-function Home() {
-    const [userName, setUserName] = useState('');
+const Home = () => {
+    const { setUserName } = useUser();
 
   return (
-    <div className="main">
-      <BrowserRouter>
-        <Link to="/cauldierre">Cauldierre</Link>
-        <Link to="/fred">Fred</Link>
-        <div className='navAdjust'></div>
-
-        <Routes>
-          <Route path="/cauldierre" element={<CaullyHome />} />
-          <Route path="/fred" element={
-            <>
-              <FredHome />
-            </>
-          } />
-
-          <Route path="/about" element={<About />} />
-          <Route path="/caully-experience" element={<CaullyResume />} />
-          <Route path="/fred-experience" element={<FredResume />} />
-          <Route path="/projects" element={<ProjectHome />} />
-          <Route path="/art" element={<Art />} />
-        </Routes>
-      </BrowserRouter>
-
+    <div className="splash">
+      {/* <a href="https://github.com/sweetnspicy" target="_blank">
+        <img src={caullylogo} className="logo caully" alt="Cauldierre's logo" />
+      </a> */}
       <div className="cards-container">
         <div className="card">
           {/* add onclick to shift pages */}
-          <h2>Cauldierre McKay</h2>
-          <h4>Software Developer</h4>
-          <p>5+ years of fullstack development experience</p>
+          <h1 className="text-forest">Cauldierre McKay</h1>
+          <h2 className="text-forest">Software Developer</h2>
+          <p className="text-forest">5+ years of fullstack development experience</p>
         </div>
         <div className="card">
-          <h2>Frederic Yao</h2>
-          <h4>CS Kid</h4>
-          <p>Something about CS kids</p>
+          <h1 className="text-forest">Frederic Yao</h1>
+          <h2 className="text-forest">CS Kid</h2>
+          <p className="text-forest">Something about CS kids</p>
         </div>
       </div>
-      <a href="https://github.com/sweetnspicy" target="_blank">
-        <img src={caullylogo} className="logo caully" alt="Cauldierre's logo" />
-      </a>
-
-      <a href="https://github.com/frederic-yao" target="_blank">
+      {/* <a href="https://github.com/frederic-yao" target="_blank">
         <img src={fredlogo} className="logo fred" alt="Fred's logo" />
-      </a>
+      </a> */}
+
+      <div className="text-terracotta flex justify-center mt-60">
+        <p>
+          We just two guys working on this site so we can make big money pls
+          and thank you hire us google and give us like 200k pls and ty
+        </p>
+      </div>
+
+      <div className="fixed bottom-0 left-0 right-0 flex justify-between p-8">
+        <Link to="/caullyhome" onClick={() => setUserName('caully')} className="bg-terracotta text-cream px-6 py-3 rounded">
+          Caully
+        </Link>
+        <Link to="/fredhome" onClick={() => setUserName('fred')} className="bg-terracotta text-cream px-6 py-3 rounded">
+          Fred
+        </Link>
+      </div>
     </div>
   );
 }

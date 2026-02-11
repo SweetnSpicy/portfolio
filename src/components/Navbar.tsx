@@ -1,11 +1,13 @@
 import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { useUser } from '../contexts/UserContext';
 
 import './Navbar.scss';
 
 
 const Navbar = () => {
 
-  const userName = 'fred';
+  const { userName } = useUser();
 
   return (
     <nav>

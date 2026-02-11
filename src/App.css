@@ -1,29 +1,44 @@
+@import "tailwindcss";
 
+@theme {
+  --color-sage: #BAD9B5;
+  --color-forest: #2D4A33;
+  --color-terracotta: #C17C67;
+  --color-cream: #F7FCF6;
+  --color-stone: #232923;
+}
+
+.splash{
+  background-image: url(./assets/splash_home.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  max-height: 900px;
+}
 #root {
-  max-width: 100%;
+  max-width: 1900px;
   width: 100%;
   margin: 0;
-  padding: 2rem;
 }
 
-.card {
-  padding: 2em;
-  background-color: lightcyan;
+body {
+  margin: 0;
 }
-
 .read-the-docs {
   color: #888;
 }
 
 /* set to be nav bar height */
-.navAdjust {
+/* .navAdjust {
   padding-top: 70px;
 }
 
 .main {
   padding-top: 70px;
   width: 100%;
-}
+} */
 
 /**
 PAGE TURNER
@@ -48,12 +63,12 @@ PAGE TURNER
 copyright info
 ******/
 
-.copyright{
+/* .copyright{
   background-color: grey;
   color:white;
   bottom: 0px;
 
-}
+} */
 
 /****
 All pop out cards styling
@@ -61,14 +76,15 @@ All pop out cards styling
 
 .cards-container {
   display: flex;
-  gap: 20px;
-  width: 45%;
+  gap: 30px;
+  width: 60%;
   margin: 0 auto; /* centers it on the page */
 }
 
 .card {
   flex: 1;
   padding: 20px;
+  font-family: crayola;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 
@@ -88,4 +104,8 @@ All pop out cards styling
               0 10px 10px rgba(0, 0, 0, 0.04);
   transform: translateY(-2px);
   transition: all 0.3s ease;
+}
+
+.splash p {
+  font-family: justsans;
 }
