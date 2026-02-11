@@ -28,6 +28,7 @@ const Home = () => {
         <img src={fredlogo} className="logo fred" alt="Fred's logo" />
       </a> */}
 
+{/*testing*/}
       <div className="text-terracotta flex justify-center mt-60">
         <p>
           We just two guys working on this site so we can make big money pls
