@@ -8,6 +8,10 @@
   --color-stone: #232923;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .splash{
   background-image: url(./assets/splash_home.png);
   background-size: cover;
