@@ -8,6 +8,10 @@
   --color-stone: #232923;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .splash{
   background-image: url(./assets/splash_home.png);
   background-size: cover;
@@ -24,6 +28,7 @@
 }
 
 body {
+  color: #2D4A33;
   margin: 0;
 }
 .read-the-docs {

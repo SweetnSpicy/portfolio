@@ -3,10 +3,12 @@
 ******************/
 nav {
   position: sticky;
+  top: 0;
   margin-left: auto;
   margin-right: auto;
   width: 40%;
   z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* set to be nav bar height */
@@ -23,7 +25,7 @@ ul {
 }
 
 ul li {
-  float:left;
+  float: left;
 }
 
 ul li a {
@@ -38,7 +40,8 @@ ul li a:hover {
 }
 
 
-li a, .dropbtn {
+li a,
+.dropbtn {
   display: inline-block;
   color: white;
   text-align: center;
@@ -46,7 +49,8 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+li a:hover,
+.dropdown:hover .dropbtn {
   background-color: red;
 }
 
@@ -59,7 +63,7 @@ li.dropdown {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -71,7 +75,9 @@ li.dropdown {
   text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
