@@ -1,14 +1,14 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CaullyLogo from '@assets/CaullyLogo.png';
 import FredLogo from '@assets/FredLogo.png';
 
 export default function About() {
-   const containerRef = useRef(null);
+   const containerRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const [currentSection, setCurrentSection] = useState(1);
   const [isCrumbling, setIsCrumbling] = useState(false);
-  const [preloadPage, setPreloadPage] = useState(null);
+  const [preloadPage, setPreloadPage] = useState<string | null>(null);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -17,7 +17,7 @@ export default function About() {
     }
   }, []);
 
-  const scrollToSection = (position) => {
+  const scrollToSection = (position: number) => {
     if (containerRef.current) {
       const width = window.innerWidth * 0.5;
       containerRef.current.scrollTo({
@@ -184,7 +184,7 @@ export default function About() {
           msOverflowStyle: 'none'
         }}
       >
-        <style jsx>{`
+        <style>{`
           div::-webkit-scrollbar {
             display: none;
           }

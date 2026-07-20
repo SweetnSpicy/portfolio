@@ -1,0 +1,87 @@
+@use '../styles/palette' as *;
+
+.user-home {
+  color: $forest;
+  font-family: justsans, system-ui, sans-serif;
+  background-color: $sage;
+
+  .hero {
+    // leave room for the nav pill so hero + nav fill the first viewport together
+    min-height: calc(100vh - 4.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    position: relative;
+    // solid stone placeholder until the hero background image goes in
+    background-color: $stone;
+
+    h1 {
+      font-family: crayola, justsansbold, system-ui, sans-serif;
+      font-size: clamp(3rem, 9vw, 6rem);
+      line-height: 1.05;
+      margin: 0;
+      color: $cream;
+    }
+
+    h2 {
+      font-family: crayola, justsans, system-ui, sans-serif;
+      font-size: clamp(1.2rem, 3vw, 1.75rem);
+      font-weight: 400;
+      color: $terracotta;
+      margin: 0;
+    }
+
+    .intro {
+      max-width: 38rem;
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: $sage;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: $sage;
+
+        &:hover {
+          color: $terracotta;
+        }
+      }
+    }
+  }
+
+  .band {
+    padding: 4rem 1.5rem 4.5rem;
+    scroll-margin-top: 5rem;
+    color: $forest;
+  }
+
+  .band-inner {
+    max-width: 64rem;
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: crayola, justsansbold, system-ui, sans-serif;
+    font-size: 2rem;
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid currentColor;
+  }
+}
