@@ -6,8 +6,8 @@ import './Art.scss'
  * @returns The art page with a moving carousel
  */
 const Art = () => {
-	const imageModules = import.meta.glob('@assets/portraits/*.{png,jpg,jpeg,SVG}', { eager: true });
-	const imageModulo = import.meta.glob('@assets/images/*.{png,jpg,jpeg,SVG}', { eager: true });
+	const imageModules = import.meta.glob<{ default: string }>('@assets/portraits/*.{png,jpg,jpeg,SVG}', { eager: true });
+	const imageModulo = import.meta.glob<{ default: string }>('@assets/images/*.{png,jpg,jpeg,SVG}', { eager: true });
 	
 	// iterates through assets/portraits folder
 	const images = Object.values(imageModules).map((module) => ({

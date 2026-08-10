@@ -1,17 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './PaperAirplane.scss';
 
-const PaperAirplane = ({ imageSrc, alt = "Paper Airplane", trigger = false, direction = 'left' }) => {
+interface PaperAirplaneProps {
+  imageSrc: string;
+  alt?: string;
+  trigger?: boolean;
+  direction?: 'left' | 'right';
+}
+
+const PaperAirplane = ({ imageSrc, alt = "Paper Airplane", trigger = false, direction = 'left' }: PaperAirplaneProps) => {
   const [isFlying, setIsFlying] = useState(false);
 
   useEffect(() => {
-    if (trigger) {
-      setIsFlying(true);
-      
-      setTimeout(() => {
-        setIsFlying(false);
-      }, 2000);
-    }
+    if (!trigger) return;
+
+    const start = setTimeout(() => setIsFlying(true), 0);
+    const stop = setTimeout(() => setIsFlying(false), 2000);
+
+    return () => {
+      clearTimeout(start);
+      clearTimeout(stop);
+    };
   }, [trigger]);
 
   return (

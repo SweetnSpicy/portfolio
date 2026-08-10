@@ -38,12 +38,12 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
         // Only set the interval if NOT paused
         if (!isPaused) {
             const timer = setInterval(() => {
-                goToNext();
+                setCurrentIndex((index) => (index === images.length - 1 ? 0 : index + 1));
             }, autoPlayTime);
 
             return () => clearInterval(timer);
         }
-    }, [currentIndex, isPaused]); // Now depends on isPaused too
+    }, [isPaused, images.length]);
 
     // Add a safety check in case images haven't loaded yet
     if (!images || images.length === 0) {
